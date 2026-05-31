@@ -35,10 +35,16 @@ public class Main {
         }
         System.out.println("**********************************");
 
-//        Student[] newArrayStudent = areyStudent();
-//        int goodScore = 6;
-//        Student[] goodStudents = Student.getStudents(newArrayStudent, goodScore);
-//            System.out.println(goodStudents[3]);
+        // переменная с пороговой оценкой, что бы с ней сравнивать
+        int thresholdMark = 7;
+
+        // Получаем массив студентов с оценкой выше порога
+        Student[] highAchievers = Student.getStudents(arrayFiveStudent, thresholdMark);
+
+        System.out.println("Студенты с оценкой выше " + thresholdMark);
+        for (Student student : highAchievers) {
+            System.out.println(student.info());
+        }
     }
 
     public static Student[] areyStudent() {
