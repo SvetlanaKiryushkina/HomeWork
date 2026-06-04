@@ -57,8 +57,8 @@ public class Student {
      массив студентов у которых оценка выше переданной оценке в методе. (Сигнатура метода будет выглядеть так
      PublicStudent[]getStudents(Students[] students, int mark)
      */
-
-    public static Student[] getStudents(Student[] students, int mark) {
+    //метод с использованием списка
+    public static Student[] getStudentsList(Student[] students, int mark) {
         List<Student> filteredStudents = new ArrayList<>();
 
         for (Student student : students) {
@@ -68,5 +68,30 @@ public class Student {
         }
         // Преобразуем список в массив и возвращаем результат
         return filteredStudents.toArray(new Student[0]);
+    }
+
+    /*
+     Создать метод в классе Student, который будет принимать массив студентов и возвращать из этих студентов,
+     массив студентов у которых оценка выше переданной оценке в методе. (Сигнатура метода будет выглядеть так
+     PublicStudent[]getStudents(Students[] students, int mark)
+     Вариант с использованием массивов
+     */
+    public static Student[] getStudentsArray (Student[] students, int mark){
+        int count = 0;
+        for (Student student : students) {
+            if (student.averageScore > mark) {
+                count++;
+            }
+        }
+
+        Student[] newArrayStudents = new Student[count];
+        int c = 0;
+        for (Student student : students) {
+            if (student.averageScore > mark) {
+                newArrayStudents[c] = student;
+                c++;
+            }
+        }
+        return newArrayStudents;
     }
 }

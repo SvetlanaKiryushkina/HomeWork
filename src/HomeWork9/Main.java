@@ -13,9 +13,8 @@ public class Main {
 
         System.out.println(dog.makeSound("Гав-гав"));
         System.out.println(dog.playing("во что-то"));
-
-
         System.out.println("********************************");
+
         Bird bird = new Bird("Черная", 1, "Пшено", "Ворона", 2);
         System.out.println(bird.toString());
         System.out.println(bird.makeSound());

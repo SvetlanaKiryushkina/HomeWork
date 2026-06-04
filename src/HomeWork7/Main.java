@@ -39,7 +39,7 @@ public class Main {
         int thresholdMark = 7;
 
         // Получаем массив студентов с оценкой выше порога
-        Student[] highAchievers = Student.getStudents(arrayFiveStudent, thresholdMark);
+        Student[] highAchievers = Student.getStudentsArray(arrayFiveStudent, thresholdMark);
 
         System.out.println("Студенты с оценкой выше " + thresholdMark);
         for (Student student : highAchievers) {
