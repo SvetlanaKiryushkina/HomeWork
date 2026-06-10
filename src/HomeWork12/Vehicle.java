@@ -1,0 +1,33 @@
+package HomeWork12;
+
+public class Vehicle {
+
+    /*
+Создать классы Car и Motorcycle, которые наследуются от общего класса Vehicle (транспорт) - готово
+1.1 Создать поле name и количество выбросов (Integer) в классе Vehicle и проинициализировать его через конструктора- готово
+1.2 Реализовать методы геттеры и сеттеры для соответствующих полей класса Vehicle - готово
+1.3 Создать generic класс Garage<T extends Vehicle >, который может хранить только объекты типа наследуемого от Vehicle.
+1.4 Реализовать метод в классе Garage, который будет разрешать или запрещать въезд в гараж в зависимости
+от количество выбросов транспортного средства. (Boolean isEntryPermitted()); Реализовать этот метод:
+если количество выбросов больше 100, тогда въезд запрещён, если меньше 100 – въезд разрешён.
+1.5 Класс Main. Создать 2 объекта класса Garage. Вывести на экран имя хранимого транспортного средства и
+проверить разрешён ли въезд транспортного средства в гараж.
+     */
+
+    private final String name;
+    private final Integer numberOfEmissions; //кол-во выбросов
+
+    public Vehicle(String name, Integer numberOfEmissions) {
+        this.name = name;
+        this.numberOfEmissions = numberOfEmissions;
+    }
+
+    public Integer getNumberOfEmissions() {
+        return numberOfEmissions;
+    }
+
+    @Override
+    public String toString() {
+        return "Транспорт " + name + " выбросы " + numberOfEmissions;
+    }
+}
