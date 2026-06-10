@@ -74,15 +74,19 @@ public class Dog extends Animal {
 
     public boolean equals(Object obj) {
         //проверяем является ли наш обьект типом Dog (собакой)
-        if (!(obj instanceof Dog dog)) {
+        if (!(obj instanceof Dog)) {
             return false;
         }
         //приведение типов
+        Dog dog = (Dog) obj;
         //Сравниваем конкретные поля Dog с нашим обьектом
 
-        return name.equals(dog.getName())
+        if (name.equals(dog.getName())
                 && breed.equals(dog.getBreed())
-                && averageWeight == dog.getAverageWeight();
+                && averageWeight == dog.getAverageWeight()){
+            return true;
+        }
+        return false;
     }
 
     public int hashCode() {
