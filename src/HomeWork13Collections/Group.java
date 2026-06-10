@@ -18,16 +18,8 @@ public class Group {
         return numberGroup;
     }
 
-    public void setNumberGroup(int numberGroup) {
-        this.numberGroup = numberGroup;
-    }
-
     public List<Student> getStudents() {
         return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
     }
 
     //Переопределим equals и hashCode для работы с коллекциями они нужны обязательно

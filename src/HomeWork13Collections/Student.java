@@ -3,7 +3,7 @@ package HomeWork13Collections;
 public class Student {
     //У студента поля: имя, фамилия, дата рождения, город рождения, средний бал.
     private String name;
-    private String surname;
+    private final String surname;
     private String birthday;
     private String cityOfBirth;
     private double averageScore;
@@ -54,18 +54,14 @@ public class Student {
 
     //Переопределим equals и hashCode для работы с коллекциями они нужны обязательно
     public boolean equals(Object obj) {
-        if (!(obj instanceof Student)) {
+        if (!(obj instanceof Student student)) {
             return false;
         }
-        Student student = (Student) obj;
-        if (name.equals(student.getName())
+        return name.equals(student.getName())
                 && surname.equals(student.getSurname())
                 && birthday.equals(student.getBirthday())
                 && cityOfBirth.equals(student.getCityOfBirth())
-                && averageScore == getAverageScore()) {
-            return true;
-        }
-        return false;
+                && averageScore == getAverageScore();
     }
 
     public int hashCode() {

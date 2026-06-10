@@ -17,16 +17,8 @@ public class Faculty {
         return nameFaculty;
     }
 
-    public void setNameFaculty(String nameFaculty) {
-        this.nameFaculty = nameFaculty;
-    }
-
     public List<Group> getGroups() {
         return groups;
-    }
-
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
     }
 
     @Override

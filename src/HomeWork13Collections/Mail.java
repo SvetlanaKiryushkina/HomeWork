@@ -67,8 +67,5 @@ public class Mail {
         groupTwo.transferToGroup(groupOne);
         System.out.println(groupTwo);
         System.out.println(groupOne.getNameStudent());
-
-
-
     }
 }
